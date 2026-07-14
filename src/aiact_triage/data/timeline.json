@@ -1,0 +1,86 @@
+{
+  "_meta": {
+    "regulation": "Regulation (EU) 2024/1689 (AI Act), as amended by the Digital Omnibus on AI",
+    "amendment_status": "Digital Omnibus on AI: provisional political agreement 7 May 2026; European Parliament vote 16 June 2026; Council approval 29 June 2026; signed by the Presidents of Parliament and Council 8 July 2026. Not yet published in the Official Journal as of 14 July 2026. Amended dates become binding on entry into force (third day after OJ publication). Until then the original dates remain the law.",
+    "last_verified": "2026-07-14",
+    "sources": [
+      "Council of the EU press release, 7 May 2026",
+      "Council document 9247/26 (provisionally agreed compromise text)",
+      "Regulation (EU) 2024/1689, OJ L, 12 July 2024"
+    ]
+  },
+  "milestones": [
+    {
+      "id": "prohibitions_original",
+      "provision": "Article 5 prohibited practices, points (a) to (h)",
+      "original_date": "2025-02-02",
+      "amended_date": null,
+      "status": "in_application",
+      "note": "The eight original prohibitions have applied since 2 February 2025. Not changed by the Omnibus."
+    },
+    {
+      "id": "prohibition_ncii_csam",
+      "provision": "Article 5(1), new points (ba) and (bb): AI systems for generating non-consensual intimate imagery or child sexual abuse material",
+      "original_date": null,
+      "amended_date": "2026-12-02",
+      "status": "introduced_by_omnibus",
+      "note": "New prohibited practice added by the Digital Omnibus. Applies from 2 December 2026, subject to the Omnibus entering into force."
+    },
+    {
+      "id": "ai_literacy",
+      "provision": "Article 4 AI literacy",
+      "original_date": "2025-02-02",
+      "amended_date": null,
+      "status": "in_application",
+      "note": "Applies since 2 February 2025. The Omnibus softens the wording from 'ensure' to taking measures to support the development of AI literacy."
+    },
+    {
+      "id": "gpai",
+      "provision": "Articles 51 to 56 (Chapter V), general-purpose AI model obligations",
+      "original_date": "2025-08-02",
+      "amended_date": null,
+      "status": "in_application",
+      "note": "Apply since 2 August 2025; not changed by the Omnibus. Commission enforcement powers activate 2 August 2026."
+    },
+    {
+      "id": "transparency_core",
+      "provision": "Article 50(1), 50(3) and 50(4) transparency obligations",
+      "original_date": "2026-08-02",
+      "amended_date": null,
+      "status": "unchanged",
+      "note": "Disclosure of AI interaction, deployer disclosure of emotion recognition and biometric categorisation, and deepfake disclosure all apply from 2 August 2026. Not postponed by the Omnibus."
+    },
+    {
+      "id": "transparency_marking",
+      "provision": "Article 50(2) machine-readable marking of synthetic content",
+      "original_date": "2026-08-02",
+      "amended_date": "2026-12-02",
+      "status": "postponed_by_omnibus",
+      "note": "Grace period to 2 December 2026 for systems already on the market at 2 August 2026. Systems placed on the market after that date must comply when placed on the market."
+    },
+    {
+      "id": "high_risk_annex_iii",
+      "provision": "Chapter III obligations for stand-alone high-risk AI systems (Annex III)",
+      "original_date": "2026-08-02",
+      "amended_date": "2027-12-02",
+      "status": "postponed_by_omnibus",
+      "note": "Postponed by 16 months. Systems placed on the market before the application date are caught only on significant design change (transitional regime)."
+    },
+    {
+      "id": "high_risk_annex_i",
+      "provision": "Chapter III obligations for high-risk AI embedded in Annex I regulated products",
+      "original_date": "2027-08-02",
+      "amended_date": "2028-08-02",
+      "status": "postponed_by_omnibus",
+      "note": "Postponed by 12 months. The Machinery Regulation moves from Annex I Section A to Section B, shifting AI-enabled machinery to a sectoral-law-first model."
+    },
+    {
+      "id": "sandboxes",
+      "provision": "National AI regulatory sandboxes",
+      "original_date": "2026-08-02",
+      "amended_date": "2027-08-02",
+      "status": "postponed_by_omnibus",
+      "note": "Each Member State must establish at least one sandbox by 2 August 2027."
+    }
+  ]
+}
