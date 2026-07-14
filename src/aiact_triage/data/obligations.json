@@ -1,0 +1,64 @@
+{
+  "_meta": {
+    "source": "Articles 4, 16, 25, 26, 27 and Chapter III Sections 2 and 3, Regulation (EU) 2024/1689",
+    "note": "Deployer obligations are the toolkit's focus. Provider obligations are summarised at chapter level only; a deployer that rebrands, substantially modifies, or repurposes a system into high-risk use becomes a provider under Article 25."
+  },
+  "high_risk_deployer": [
+    {
+      "id": "use_per_instructions",
+      "article": "Art. 26(1)",
+      "summary": "Take appropriate technical and organisational measures to use the system in accordance with its instructions for use"
+    },
+    {
+      "id": "human_oversight",
+      "article": "Art. 26(2)",
+      "summary": "Assign human oversight to natural persons with the necessary competence, training, authority and support"
+    },
+    {
+      "id": "input_data_control",
+      "article": "Art. 26(4)",
+      "summary": "To the extent the deployer controls input data, ensure it is relevant and sufficiently representative for the intended purpose"
+    },
+    {
+      "id": "monitor_and_report",
+      "article": "Art. 26(5)",
+      "summary": "Monitor operation per the instructions for use; inform the provider and authorities of risks or serious incidents and suspend use where indicated"
+    },
+    {
+      "id": "log_retention",
+      "article": "Art. 26(6)",
+      "summary": "Keep automatically generated logs under the deployer's control for a period appropriate to the intended purpose, at least six months unless applicable Union or national law, in particular on the protection of personal data, provides otherwise"
+    },
+    {
+      "id": "inform_workers",
+      "article": "Art. 26(7)",
+      "summary": "Before putting a workplace high-risk system into service or using it, deployers who are employers inform workers' representatives and the affected workers"
+    },
+    {
+      "id": "inform_affected_persons",
+      "article": "Art. 26(11)",
+      "summary": "Inform natural persons that they are subject to the use of a high-risk Annex III system that makes or assists decisions relating to them; for systems used for law enforcement purposes, Article 13 of Directive (EU) 2016/680 applies instead"
+    },
+    {
+      "id": "fria",
+      "article": "Art. 27",
+      "summary": "Fundamental rights impact assessment before first use, for public-law bodies, private entities providing public services, and deployers of credit-scoring and life/health insurance pricing systems (Annex III 5(b) and 5(c)); systems intended for the critical-infrastructure area (Annex III point 2) are excepted"
+    }
+  ],
+  "high_risk_provider_summary": {
+    "article": "Arts. 8-15 (Chapter III Section 2), the provider obligations within Section 3 (Arts. 16-22), and Arts. 43, 49 and 72",
+    "summary": "Risk management system (Art. 9), data governance (Art. 10), technical documentation (Art. 11), record-keeping (Art. 12), transparency to deployers (Art. 13), human oversight design (Art. 14), accuracy, robustness and cybersecurity (Art. 15), quality management, conformity assessment, registration and post-market monitoring"
+  },
+  "deployer_becomes_provider": {
+    "article": "Art. 25(1)",
+    "triggers": [
+      "Putting your name or trademark on a high-risk system already on the market",
+      "Making a substantial modification to a high-risk system that keeps it high-risk",
+      "Modifying the intended purpose of a non-high-risk system so it becomes high-risk"
+    ]
+  },
+  "ai_literacy": {
+    "article": "Art. 4",
+    "summary": "Take measures to support the development of AI literacy among staff and other persons dealing with AI systems on the organisation's behalf (wording per the Digital Omnibus, signed 8 July 2026, not yet in force; until then the binding Article 4 text requires measures to ensure, to their best extent, a sufficient level of AI literacy)"
+  }
+}
