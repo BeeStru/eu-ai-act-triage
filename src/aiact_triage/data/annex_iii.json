@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "source": "Annex III and Article 6, Regulation (EU) 2024/1689",
+    "note": "The eight Annex III areas are unchanged by the Digital Omnibus. The Article 6(3) derogation and the associated registration duty for self-assessed non-high-risk systems are retained by the Omnibus (the Commission had proposed deleting the registration duty; the co-legislators reinstated it)."
+  },
+  "areas": [
+    {
+      "id": "biometrics",
+      "point": "Annex III, 1",
+      "name": "Biometrics (in so far as permitted under Union or national law)",
+      "examples": "Remote biometric identification (excluding 1:1 verification-only systems), biometric categorisation by sensitive or protected attributes, emotion recognition (where not prohibited)"
+    },
+    {
+      "id": "critical_infrastructure",
+      "point": "Annex III, 2",
+      "name": "Critical infrastructure",
+      "examples": "Safety components in the management and operation of critical digital infrastructure, road traffic, water, gas, heating, electricity"
+    },
+    {
+      "id": "education",
+      "point": "Annex III, 3",
+      "name": "Education and vocational training",
+      "examples": "Access and admission decisions, learning-outcome evaluation, level assessment, monitoring and detecting prohibited student behaviour during tests"
+    },
+    {
+      "id": "employment",
+      "point": "Annex III, 4",
+      "name": "Employment, workers' management and access to self-employment",
+      "examples": "Recruitment and selection (CV screening, targeted job ads, candidate evaluation), decisions affecting terms of work-related relationships including promotion and termination, task allocation based on behaviour or traits, monitoring and evaluation of performance and behaviour"
+    },
+    {
+      "id": "essential_services",
+      "point": "Annex III, 5",
+      "name": "Access to and enjoyment of essential private services and essential public services and benefits",
+      "examples": "Public benefits eligibility, creditworthiness and credit scoring (excluding systems for detecting financial fraud), life and health insurance risk assessment and pricing, emergency call triage and dispatch"
+    },
+    {
+      "id": "law_enforcement",
+      "point": "Annex III, 6",
+      "name": "Law enforcement (in so far as permitted under Union or national law)",
+      "examples": "Victim-risk assessment, polygraph-type tools, evidence-reliability evaluation, offending-risk assessment (not based solely on profiling), assessment of personality traits and past criminal behaviour, profiling of natural persons in the detection, investigation or prosecution of criminal offences"
+    },
+    {
+      "id": "migration",
+      "point": "Annex III, 7",
+      "name": "Migration, asylum and border control management (in so far as permitted under Union or national law)",
+      "examples": "Polygraph-type tools, assessment of security, irregular-migration or health risks, examination of asylum, visa and residence applications, identification of persons (excluding verification of travel documents)"
+    },
+    {
+      "id": "justice_democracy",
+      "point": "Annex III, 8",
+      "name": "Administration of justice and democratic processes",
+      "examples": "Assisting judicial authorities in researching, interpreting and applying the law to facts (including in alternative dispute resolution); influencing the outcome of elections or referenda or voting behaviour (excluding systems whose output natural persons are not directly exposed to, such as administrative or logistical campaign tools)"
+    }
+  ],
+  "art_6_3_derogation": {
+    "source": "Article 6(3), Regulation (EU) 2024/1689",
+    "note": "An Annex III system is not high-risk where it does not pose a significant risk of harm to health, safety or fundamental rights, including by not materially influencing decision outcomes, AND at least one condition below is met. The derogation is NOT available where the system performs profiling of natural persons (Art. 6(3), final subparagraph). Providers relying on the derogation must document the assessment and register the system in the EU database.",
+    "conditions": [
+      {
+        "id": "narrow_procedural",
+        "text": "The system is intended to perform a narrow procedural task"
+      },
+      {
+        "id": "improve_completed_activity",
+        "text": "The system is intended to improve the result of a previously completed human activity"
+      },
+      {
+        "id": "detect_patterns_no_influence",
+        "text": "The system detects decision-making patterns or deviations from prior patterns and is not meant to replace or influence a previously completed human assessment without proper human review"
+      },
+      {
+        "id": "preparatory_task",
+        "text": "The system performs a preparatory task to an assessment relevant to the Annex III use case"
+      }
+    ]
+  }
+}
