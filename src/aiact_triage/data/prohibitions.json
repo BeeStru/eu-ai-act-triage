@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "source": "Article 5, Regulation (EU) 2024/1689; points (a) to (h) are the binding, in-force text. The Digital Omnibus on AI, which would add points (ba), (bb) and paragraphs 1a and 1b, was signed 8 July 2026 but is not yet published in the Official Journal and is not yet in force.",
+    "note": "Points (a) to (h) apply since 2 February 2025. The NCII/CSAM prohibition is new in the Omnibus and applies from 2 December 2026, subject to entry into force."
+  },
+  "practices": [
+    {
+      "id": "subliminal_manipulation",
+      "article": "Art. 5(1)(a)",
+      "question": "Does the system deploy subliminal, purposefully manipulative or deceptive techniques that materially distort a person's behaviour, causing or reasonably likely to cause significant harm?",
+      "summary": "Subliminal or manipulative techniques distorting behaviour with significant harm",
+      "timeline_id": "prohibitions_original"
+    },
+    {
+      "id": "exploiting_vulnerabilities",
+      "article": "Art. 5(1)(b)",
+      "question": "Does the system exploit vulnerabilities of a person or group due to age, disability or a specific social or economic situation, materially distorting behaviour and causing or reasonably likely to cause significant harm?",
+      "summary": "Exploitation of vulnerabilities (age, disability, social or economic situation)",
+      "timeline_id": "prohibitions_original"
+    },
+    {
+      "id": "social_scoring",
+      "article": "Art. 5(1)(c)",
+      "question": "Does the system evaluate or classify people over time based on social behaviour or personal characteristics, with the score leading to detrimental treatment in unrelated contexts or treatment that is unjustified or disproportionate?",
+      "summary": "Social scoring leading to detrimental or disproportionate treatment",
+      "timeline_id": "prohibitions_original"
+    },
+    {
+      "id": "predictive_policing_profiling",
+      "article": "Art. 5(1)(d)",
+      "question": "Does the system assess or predict the risk of a person committing a criminal offence based solely on profiling or on assessing personality traits and characteristics (outside AI systems that support a human assessment already based on objective and verifiable facts directly linked to a criminal activity)?",
+      "summary": "Crime-risk prediction based solely on profiling or personality traits",
+      "timeline_id": "prohibitions_original"
+    },
+    {
+      "id": "untargeted_face_scraping",
+      "article": "Art. 5(1)(e)",
+      "question": "Does the system create or expand facial recognition databases through untargeted scraping of facial images from the internet or CCTV footage?",
+      "summary": "Untargeted scraping of facial images for recognition databases",
+      "timeline_id": "prohibitions_original"
+    },
+    {
+      "id": "emotion_inference_work_education",
+      "article": "Art. 5(1)(f)",
+      "question": "Does the system infer emotions of a natural person in the workplace or an education institution (outside medical or safety uses)?",
+      "summary": "Emotion inference in workplace or education settings",
+      "timeline_id": "prohibitions_original"
+    },
+    {
+      "id": "biometric_categorisation_sensitive",
+      "article": "Art. 5(1)(g)",
+      "question": "Does the system categorise people based on biometric data to deduce or infer race, political opinions, trade union membership, religious or philosophical beliefs, sex life or sexual orientation (outside the labelling or filtering of lawfully acquired biometric datasets based on biometric data, or the categorising of biometric data in the area of law enforcement)?",
+      "summary": "Biometric categorisation inferring sensitive attributes",
+      "timeline_id": "prohibitions_original"
+    },
+    {
+      "id": "realtime_remote_biometric_id",
+      "article": "Art. 5(1)(h)",
+      "question": "Does the system perform real-time remote biometric identification in publicly accessible spaces for law enforcement purposes (outside the narrow listed exceptions)?",
+      "summary": "Real-time remote biometric identification in public spaces for law enforcement",
+      "timeline_id": "prohibitions_original"
+    },
+    {
+      "id": "ncii_csam_generation",
+      "article": "Art. 5(1), first subpara, points (ba) and (bb), and Art. 5(1a)-(1b) (Digital Omnibus)",
+      "question": "Is generating or manipulating non-consensual intimate imagery of an identifiable person, or CSAM (outside a 'without right' defence under national law), the system's intended purpose, or is it a reasonably foreseeable outcome of the system's design without significant technical modification where the system lacks reasonable and adequate technical safety measures and other safeguards to prevent it, or does a deployer use the system for that purpose (not counting manipulation that does not increase exposure of intimate parts or alter the nature of the depicted activity)?",
+      "summary": "Generation or manipulation of non-consensual intimate imagery or CSAM, where intended, a foreseeable unsafeguarded design outcome, or the deployer's actual purpose (new Omnibus prohibition)",
+      "timeline_id": "prohibition_ncii_csam"
+    }
+  ]
+}
