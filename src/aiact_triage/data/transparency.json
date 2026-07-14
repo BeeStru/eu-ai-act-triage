@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "source": "Article 50, Regulation (EU) 2024/1689; amended dates per the Digital Omnibus on AI, signed 8 July 2026, not yet published in the Official Journal and not yet in force",
+    "note": "Article 50 duties apply regardless of risk tier and can stack with high-risk classification. Article 50(1), (3) and (4) apply from 2 August 2026, unchanged by the Omnibus. Article 50(2) machine-readable marking is postponed to 2 December 2026 for systems on the market at 2 August 2026."
+  },
+  "duties": [
+    {
+      "id": "disclose_ai_interaction",
+      "article": "Art. 50(1)",
+      "role": "provider",
+      "trigger": "interacts_with_natural_persons",
+      "summary": "Design the system so people are informed they are interacting with an AI system, unless this is obvious to a person who is reasonably well-informed, observant and circumspect, taking into account the circumstances and context of use (systems authorised by law for criminal-offence detection, prevention, investigation or prosecution are exempt, subject to appropriate safeguards for the rights and freedoms of third parties, unless available for the public to report an offence)",
+      "timeline_id": "transparency_core"
+    },
+    {
+      "id": "mark_synthetic_content",
+      "article": "Art. 50(2)",
+      "role": "provider",
+      "trigger": "generates_synthetic_content",
+      "summary": "Mark outputs of generative systems (audio, image, video, text) in a machine-readable format detectable as artificially generated or manipulated, using technical solutions that are effective, interoperable, robust and reliable as far as technically feasible; the duty does not apply to the extent the system performs an assistive function for standard editing or does not substantially alter the input data or its semantics, or where authorised by law for criminal-offence detection, prevention, investigation or prosecution",
+      "timeline_id": "transparency_marking"
+    },
+    {
+      "id": "disclose_emotion_or_biometric",
+      "article": "Art. 50(3)",
+      "role": "deployer",
+      "trigger": "emotion_recognition_or_biometric_categorisation",
+      "summary": "Inform people exposed to an emotion recognition or biometric categorisation system of its operation, and process their personal data in accordance with Regulations (EU) 2016/679 and 2018/1725 and Directive (EU) 2016/680 (systems permitted by law to detect, prevent or investigate criminal offences are exempt, subject to safeguards for the rights and freedoms of third parties)",
+      "timeline_id": "transparency_core"
+    },
+    {
+      "id": "disclose_deepfake",
+      "article": "Art. 50(4)",
+      "role": "deployer",
+      "trigger": "deepfake_or_public_interest_text",
+      "summary": "Disclose that deepfake content, or AI-generated text published to inform the public on matters of public interest, has been artificially generated or manipulated; for evidently artistic, creative, satirical, fictional or analogous work or programme the duty is limited to disclosing the existence of the manipulation without hampering display or enjoyment of the work, no text duty applies where the content underwent human review or editorial control with a person holding editorial responsibility, and law-enforcement-authorised uses are exempt",
+      "timeline_id": "transparency_core"
+    }
+  ]
+}
