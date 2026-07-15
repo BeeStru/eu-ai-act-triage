@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "purpose": "Knock-on flags into adjacent frameworks. A classification under the AI Act rarely travels alone: the same system usually has a home in the firm's model risk framework, its ICT third-party register, or its data protection obligations. These flags name the adjacent obligation; they do not assess it.",
+    "sources": "PRA SS1/23 (including the April 2026 update), Bank of England AI supervisory work (February 2026 roundtables), DORA (Regulation (EU) 2022/2554), ISO/IEC 42001:2023, UK/EU GDPR. Verification of these anchors is recorded in the commit history, not asserted here.",
+    "confidence_note": "ISO/IEC 42001 is cited at Annex A level deliberately, without clause numbers, pending verification against the standard's text."
+  },
+  "rules": [
+    {
+      "id": "ss1_23_inventory",
+      "framework": "PRA SS1/23",
+      "trigger": { "all": ["financial_services_context"] },
+      "note": "PRA SS1/23: the system falls within the PRA's broad model definition (which covers in-house and vendor models alike), so it belongs in the firm's model inventory with a risk-based tier. Tiering weighs materiality and complexity, and the complexity factors explicitly include explainability and the potential for data bias (Principle 1). The SS1/23 model tier and the AI Act risk tier are different classifications answering different questions; record both, conflate neither."
+    },
+    {
+      "id": "ss1_23_lifecycle_alignment",
+      "framework": "PRA SS1/23",
+      "trigger": { "all": ["financial_services_context"], "tier_in": ["high_risk"] },
+      "note": "PRA SS1/23: the AI Act deployer duties map onto the MRM lifecycle. Article 26 human oversight, input-data control and monitoring align with Principles 3 to 5 (use, independent validation, risk mitigants), and a vendor-supplied system attracts Principle 2.6, validation to the firm's own standards. Bank of England supervisory work (February 2026) points validation toward outcome testing, monitoring and guardrails for generative and agentic systems."
+    },
+    {
+      "id": "dora_third_party",
+      "framework": "DORA",
+      "trigger": { "all": ["financial_services_context", "vendor_supplied"] },
+      "note": "DORA: a vendor-supplied AI system used by a financial entity is an ICT third-party service arrangement. Record it in the register of information (DORA Article 28(3)) and check the contract against the key contractual provisions (Article 30)."
+    },
+    {
+      "id": "iso42001_supplier",
+      "framework": "ISO/IEC 42001",
+      "trigger": { "all": ["vendor_supplied"] },
+      "note": "ISO/IEC 42001: supplier-provided AI falls under the Annex A controls on third parties and suppliers. The third-party AI due-diligence questionnaire in this toolkit is built to evidence those controls."
+    },
+    {
+      "id": "gdpr_special_category",
+      "framework": "UK/EU GDPR",
+      "trigger": { "any": ["emotion_recognition", "biometric_categorisation"] },
+      "note": "UK/EU GDPR: emotion recognition and biometric categorisation can engage special category data (Article 9) by different routes: biometric categorisation where the inferred trait reveals a listed special category (such as racial or ethnic origin), emotion recognition where the processed data amounts to health data. Where Article 9 data is involved, a data protection impact assessment is expected alongside the AI Act assessment (Article 35(3)(b) requires one for large-scale special-category processing)."
+    }
+  ]
+}

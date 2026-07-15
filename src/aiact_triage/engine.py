@@ -336,5 +336,23 @@ def classify(case: UseCase) -> Assessment:
         _obligation_from_timeline(literacy["article"], literacy["summary"], "ai_literacy")
     )
     _consistency_checks(case, assessment)
+    _apply_cross_framework(case, assessment)
     assessment.notes.append(meta["amendment_status"])
     return assessment
+
+
+def _apply_cross_framework(case: UseCase, assessment: Assessment) -> None:
+    """Append knock-on flags for adjacent frameworks (SS1/23, DORA, ISO 42001,
+    GDPR). The flag names the adjacent obligation; it does not assess it.
+    Skipped for prohibited systems, whose only next step is escalation."""
+    for rule in rules.cross_framework_rules():
+        trigger = rule["trigger"]
+        if "tier_in" in trigger and assessment.tier.value not in trigger["tier_in"]:
+            continue
+        if not all(getattr(case, name, False) for name in trigger.get("all", [])):
+            continue
+        if "any" in trigger and not any(
+            getattr(case, name, False) for name in trigger["any"]
+        ):
+            continue
+        assessment.notes.append(f"Cross-framework: {rule['note']}")

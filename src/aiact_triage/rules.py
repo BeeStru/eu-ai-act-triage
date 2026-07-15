@@ -52,3 +52,7 @@ def transparency_duties() -> list[dict]:
 
 def obligations() -> dict:
     return _load("obligations.json")
+
+
+def cross_framework_rules() -> list[dict]:
+    return _load("cross_framework.json")["rules"]
