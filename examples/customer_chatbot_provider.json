@@ -1,0 +1,6 @@
+{
+  "name": "Customer service chatbot (as provider)",
+  "role": "provider",
+  "interacts_with_natural_persons": true,
+  "generates_synthetic_content": true
+}
