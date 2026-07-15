@@ -190,7 +190,10 @@ def render_summary(pairs: list[tuple[UseCase, Assessment]]) -> str:
     ]
     by_tier: dict[RiskTier, list[str]] = {tier: [] for tier in tier_order}
     for case, assessment in pairs:
-        by_tier[assessment.tier].append(case.name)
+        # A held row is provisionally classified pending data correction,
+        # a different claim from a confirmed tier; the headline list says so.
+        label = case.name + (" (NEEDS REVIEW)" if assessment.needs_review else "")
+        by_tier[assessment.tier].append(label)
     for tier in tier_order:
         names = by_tier[tier]
         lines.append(f"- {TIER_LABELS[tier]}: {len(names)}")

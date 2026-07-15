@@ -84,6 +84,28 @@ def test_summary_surfaces_attention_items_and_calendar():
     assert "2027-12-02" in summary
 
 
+def test_summary_tier_list_marks_held_rows():
+    # A held (data-error) row is a different claim from a confirmed
+    # high-risk row; the headline tier list must say so, not just the
+    # attention items further down.
+    genuine = UseCase(
+        name="Genuine screener",
+        role=Role.DEPLOYER,
+        annex_iii_area="employment",
+        profiling_of_natural_persons=True,
+    )
+    held = UseCase(
+        name="Typo system",
+        role=Role.PROVIDER,
+        prohibited_flags=["socail_scoring"],  # deliberate typo
+    )
+    pairs = list(zip([genuine, held], assess_register([genuine, held])))
+    summary = render_summary(pairs)
+    assert "Typo system (NEEDS REVIEW)" in summary
+    assert "Genuine screener (NEEDS REVIEW)" not in summary
+    assert "Genuine screener" in summary
+
+
 def test_write_register_outputs_creates_records_and_summary(tmp_path):
     written = write_register_outputs(_pairs(), tmp_path, assessor="B. Struve")
     # Seven records plus the summary.
