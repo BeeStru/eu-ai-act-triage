@@ -1,0 +1,24 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install -e ".[dev]"
+      - run: pytest -q
+      - name: prove non-editable install carries the rule data
+        run: |
+          pip uninstall -y aiact-triage
+          pip install .
+          cd /tmp && python -c "import aiact_triage.rules as r; r.timeline(); print('packaged data ok')"
