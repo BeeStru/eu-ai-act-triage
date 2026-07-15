@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.3.0 (July 2026)
+
+Cross-framework flags (PRA SS1/23, DORA, ISO/IEC 42001, GDPR Article 9) from
+a dedicated rule file, driven by the financial-services and vendor-supplied
+context fields; the flag names the adjacent obligation, it does not assess
+it. Regression test pinning that an in-house, non-financial-services row
+raises no flags. SS1/23-vocabulary AI inventory template that runs directly
+through register mode, with field definitions in docs/INVENTORY.md.
+Third-party AI due-diligence questionnaire and the design specification for
+the governed LLM intake assistant added as documents.
+
 ## 0.2.0 (July 2026)
 
 Register mode: batch assessment over a CSV or JSON inventory, one dated
