@@ -164,6 +164,16 @@ def main(argv: list[str] | None = None) -> int:
     assess.add_argument("case_file", help="Path to the structured answers JSON")
     assess.add_argument("--json", action="store_true", help="Emit the assessment as JSON")
 
+    register = sub.add_parser(
+        "register", help="Assess a whole AI inventory (CSV or JSON) in batch"
+    )
+    register.add_argument("register_file", help="Path to the inventory (.csv or .json)")
+    register.add_argument(
+        "--out",
+        help="Directory for per-system audit records and the portfolio summary",
+    )
+    register.add_argument("--assessor", help="Name recorded on each audit record")
+
     sub.add_parser("interactive", help="Walk the intake questionnaire")
 
     args = parser.parse_args(argv)
@@ -174,6 +184,15 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps(asdict(assessment), indent=2, default=str))
         else:
             print(render(assessment))
+    elif args.command == "register":
+        from .register import assess_register, load_register, render_summary, write_register_outputs
+
+        cases = load_register(args.register_file)
+        pairs = list(zip(cases, assess_register(cases)))
+        if args.out:
+            written = write_register_outputs(pairs, args.out, args.assessor)
+            print(f"Wrote {len(written)} files to {args.out}/")
+        print(render_summary(pairs))
     else:
         assessment = classify(build_case_interactively())
         print("\n" + render(assessment))
