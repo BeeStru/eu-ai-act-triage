@@ -12,7 +12,7 @@ That is what makes an AI inventory hard. The difficult part is not recording whi
 
 Four components, with their status stated plainly so nothing here is oversold:
 
-- **Triage engine and register mode** (`aiact-triage`, the Python package). Working and tested (37 tests, no runtime dependencies). Classifies one use case or a whole inventory and produces the audit records. This is the core; the rest builds on the classification it produces.
+- **Triage engine and register mode** (`aiact-triage`, the Python package). Working and tested (38 tests, no runtime dependencies). Classifies one use case or a whole inventory and produces the audit records. This is the core; the rest builds on the classification it produces.
 - **AI inventory template** in PRA SS1/23 vocabulary (`templates/ai_inventory_template.csv`). Complete. A single file that is both a model-risk inventory and the engine's input, so the inventory and the AI register cannot drift apart. Documented in [docs/INVENTORY.md](docs/INVENTORY.md).
 - **Third-party AI due-diligence questionnaire** (`templates/third_party_ai_due_diligence.md`). Complete. Thirty questions for assessing a vendor-supplied AI system, each carrying the framework anchor it evidences (ISO/IEC 42001 Annex A, DORA Articles 28 to 30, the AI Act, PRA SS1/23, or the OWASP LLM Top 10).
 - **Governed LLM intake assistant** ([docs/DESIGN_llm_component.md](docs/DESIGN_llm_component.md)). Designed, not yet built. An LLM front-end that drafts intake answers for a human to confirm, governed by the toolkit's own instruments. Its evaluation results will be published here when they exist and not before.

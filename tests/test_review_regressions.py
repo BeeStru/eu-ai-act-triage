@@ -38,6 +38,18 @@ def test_unknown_prohibited_flag_fails_closed_to_high_risk_needs_review():
     assert any(n.startswith("DATA ERROR") for n in result.notes)
 
 
+def test_prohibited_hold_attaches_only_the_art_4_baseline():
+    result = classify(
+        UseCase(name="Thing", role=Role.DEPLOYER, prohibited_flags=["socail_scoring"])
+    )
+    assert result.tier is RiskTier.HIGH_RISK
+    assert result.needs_review is True
+    # The hold is a stop-and-fix state, not a duty state: pending correction
+    # the outcome is either terminal PROHIBITED (no duties to report) or a
+    # reclassification, so no Annex-route duties attach to the held record.
+    assert [o.article for o in result.obligations] == ["Art. 4"]
+
+
 def test_prohibited_record_carries_the_legal_status_note():
     result = classify(
         UseCase(
