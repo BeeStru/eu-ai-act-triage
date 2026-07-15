@@ -97,3 +97,24 @@ def test_csv_no_in_context_fields_yields_no_cross_framework_flags(tmp_path):
     result = classify(case)
     assert result.tier is RiskTier.HIGH_RISK
     assert _cross_notes(result) == []
+
+
+def test_inventory_template_runs_through_register_mode():
+    from pathlib import Path
+
+    from aiact_triage.register import assess_register, load_register
+
+    template = (
+        Path(__file__).resolve().parents[1]
+        / "templates"
+        / "ai_inventory_template.csv"
+    )
+    cases = load_register(template)
+    assert len(cases) == 1
+    case = cases[0]
+    # SS1/23 columns pass through untouched.
+    assert case.metadata["model_id"] == "MDL-0042"
+    assert case.metadata["model_tier"] == "Tier 1"
+    result = assess_register(cases)[0]
+    assert result.tier is RiskTier.HIGH_RISK
+    assert any("SS1/23" in n for n in result.notes)
