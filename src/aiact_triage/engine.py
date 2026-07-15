@@ -50,13 +50,20 @@ def _data_error(assessment: Assessment, message: str) -> None:
                             "be relied on until the intake data is corrected.")
 
 
-def _check_prohibited(case: UseCase, assessment: Assessment) -> bool:
-    """Article 5 screen. Returns True if any prohibition applies."""
+def _check_prohibited(case: UseCase, assessment: Assessment) -> tuple[bool, bool]:
+    """Article 5 screen.
+
+    Returns (hit, hold): hit is True if a prohibition applies; hold is True
+    if an unmatchable prohibited-practice id requires a high-risk holding
+    classification instead.
+    """
     catalogue = rules.prohibitions()
     hit = False
+    unknown = False
     for flag in case.prohibited_flags:
         practice = catalogue.get(flag)
         if practice is None:
+            unknown = True
             _data_error(
                 assessment,
                 f"Unknown prohibited-practice id {flag!r}. "
@@ -79,7 +86,22 @@ def _check_prohibited(case: UseCase, assessment: Assessment) -> bool:
                 timeline_id=practice["timeline_id"],
             )
         )
-    return hit
+    if unknown and not hit:
+        # Fail closed: an unmatchable prohibited-practice id cannot
+        # demonstrate the prohibition applies, but the assessor answered yes
+        # at the Article 5 screen, so the safe holding position is high-risk
+        # pending correction, not minimal.
+        assessment.findings.append(
+            Finding(
+                article="Art. 5",
+                title="High-risk (holding classification pending data correction)",
+                rationale="The recorded prohibited-practice id does not match "
+                "the rule set, so the Article 5 screen cannot run. Held at "
+                "high-risk until the intake is corrected.",
+            )
+        )
+        return False, True
+    return hit, False
 
 
 def _check_high_risk(case: UseCase, assessment: Assessment) -> bool:
@@ -283,7 +305,8 @@ def classify(case: UseCase) -> Assessment:
     assessment = Assessment(use_case=case.name, role=case.role, tier=RiskTier.MINIMAL)
     meta = rules.timeline_meta()
 
-    if _check_prohibited(case, assessment):
+    prohibited, prohibited_hold = _check_prohibited(case, assessment)
+    if prohibited:
         assessment.tier = RiskTier.PROHIBITED
         # Terminal: no compliance pathway exists. The record still carries
         # the legal-status stamp like every other record.
@@ -293,7 +316,7 @@ def classify(case: UseCase) -> Assessment:
     high_risk = _check_high_risk(case, assessment)
     transparency = _check_transparency(case, assessment)
 
-    if high_risk:
+    if high_risk or prohibited_hold:
         assessment.tier = RiskTier.HIGH_RISK
     elif transparency:
         assessment.tier = RiskTier.TRANSPARENCY

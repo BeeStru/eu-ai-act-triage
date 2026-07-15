@@ -149,6 +149,20 @@ def test_spam_filter_is_minimal_but_literacy_still_noted():
     assert "Art. 4" in _articles(result)
 
 
+def test_unknown_prohibited_flag_fails_closed_to_high_risk():
+    case = UseCase(
+        name="Typo in the Article 5 screen",
+        role=Role.PROVIDER,
+        prohibited_flags=["socail_scoring"],  # deliberate typo
+    )
+    result = classify(case)
+    assert result.needs_review is True
+    assert result.tier is RiskTier.HIGH_RISK  # holding position, not minimal
+    assert any(n.startswith("DATA ERROR") for n in result.notes)
+    # A holding classification is not a prohibition verdict.
+    assert result.tier is not RiskTier.PROHIBITED
+
+
 def test_high_risk_and_transparency_stack():
     case = UseCase(
         name="Emotion-aware candidate interview scorer",
