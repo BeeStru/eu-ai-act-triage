@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.2.0 (July 2026)
+
+Register mode: batch assessment over a CSV or JSON inventory, one dated
+audit record per system, portfolio summary with tier counts, attention items
+and a deadline calendar on the planning baseline. Unknown inventory columns
+pass through into the audit record. All boolean columns, including the two
+context fields, are parsed strictly: yes/no and equivalents only, a malformed
+value is a readable error, and a "no" is never carried as a truthy string
+(fixes a defect found in the pre-release reference design). Systems held
+pending data correction are marked NEEDS REVIEW by name in the summary's
+tier list, not only in the attention items.
+
 ## 0.1.0 (July 2026)
 
 Initial triage engine, first public release. Built from a design that had
