@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4.0 (July 2026)
+
+Hardening and release readiness. Regression suite pinning the safety
+behaviours the engine has carried since 0.1.0 (unknown rule ids failing
+closed to high-risk with NEEDS REVIEW loud in the record, the CLI report and
+the portfolio summary; consistency checks on contradictory intake answers;
+the legal-status note on prohibited records; the role-aware Article 6(3)
+note), so none can regress silently. CI on Python 3.11 and 3.12, including a
+non-editable install check proving a plain `pip install .` ships the JSON
+rule data. Full README and methodology documentation.
+
 ## 0.3.0 (July 2026)
 
 Cross-framework flags (PRA SS1/23, DORA, ISO/IEC 42001, GDPR Article 9) from
