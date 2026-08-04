@@ -88,8 +88,8 @@ def build_case_interactively() -> UseCase:
     print("\n-- High-risk screen (Article 6) --")
     annex_i = _ask_yes_no(
         "Is the system a safety component of, or itself a product covered by, "
-        "Annex I Union harmonisation legislation (e.g. medical devices, lifts, "
-        "radio equipment) requiring third-party conformity assessment?"
+        "Annex I Union harmonisation legislation (e.g. medical devices, lifts) "
+        "requiring third-party conformity assessment?"
     )
     annex_iii_area = None
     profiling = False
