@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "source": "Article 50, Regulation (EU) 2024/1689; amended dates per the Digital Omnibus on AI, signed 8 July 2026, not yet published in the Official Journal and not yet in force",
-    "note": "Article 50 duties apply regardless of risk tier and can stack with high-risk classification. Article 50(1), (3) and (4) apply from 2 August 2026, unchanged by the Omnibus. Article 50(2) machine-readable marking is postponed to 2 December 2026 for systems on the market at 2 August 2026."
+    "source": "Article 50, Regulation (EU) 2024/1689; amended dates per Regulation (EU) 2026/1744 (Digital Omnibus on AI), published in the Official Journal on 24 July 2026 and in force since 27 July 2026",
+    "note": "Article 50 duties apply regardless of risk tier and can stack with high-risk classification. Article 50(1), (3) and (4) apply from 2 August 2026, unchanged by the Omnibus. Article 50(2) machine-readable marking applies from 2 August 2026; Article 111(4) gives providers of generative systems placed on the market before 2 August 2026 until 2 December 2026 to comply."
   },
   "duties": [
     {
