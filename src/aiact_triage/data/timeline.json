@@ -1,11 +1,10 @@
 {
   "_meta": {
-    "regulation": "Regulation (EU) 2024/1689 (AI Act), as amended by the Digital Omnibus on AI",
-    "amendment_status": "Digital Omnibus on AI: provisional political agreement 7 May 2026; European Parliament vote 16 June 2026; Council approval 29 June 2026; signed by the Presidents of Parliament and Council 8 July 2026. Not yet published in the Official Journal as of 14 July 2026. Amended dates become binding on entry into force (third day after OJ publication). Until then the original dates remain the law.",
-    "last_verified": "2026-07-14",
+    "regulation": "Regulation (EU) 2024/1689 (AI Act), as amended by Regulation (EU) 2026/1744 (Digital Omnibus on AI)",
+    "amendment_status": "Digital Omnibus on AI: adopted as Regulation (EU) 2026/1744 of 8 July 2026, published in the Official Journal on 24 July 2026 (OJ L, 24.7.2026) and in force since 27 July 2026 (third day after publication). The amended dates are the binding law; the original dates are kept for the record.",
+    "last_verified": "2026-08-04",
     "sources": [
-      "Council of the EU press release, 7 May 2026",
-      "Council document 9247/26 (provisionally agreed compromise text)",
+      "Regulation (EU) 2026/1744, OJ L, 24.7.2026",
       "Regulation (EU) 2024/1689, OJ L, 12 July 2024"
     ]
   },
@@ -24,7 +23,7 @@
       "original_date": null,
       "amended_date": "2026-12-02",
       "status": "introduced_by_omnibus",
-      "note": "New prohibited practice added by the Digital Omnibus. Applies from 2 December 2026, subject to the Omnibus entering into force."
+      "note": "New prohibited practice added by Regulation (EU) 2026/1744. Applies from 2 December 2026 (Article 113(3)(a))."
     },
     {
       "id": "ai_literacy",
@@ -32,7 +31,7 @@
       "original_date": "2025-02-02",
       "amended_date": null,
       "status": "in_application",
-      "note": "Applies since 2 February 2025. The Omnibus softens the wording from 'ensure' to taking measures to support the development of AI literacy."
+      "note": "Applies since 2 February 2025. Since 27 July 2026 the replaced Article 4 requires taking measures to support the development of AI literacy, softening the original 'ensure' wording."
     },
     {
       "id": "gpai",
@@ -56,11 +55,11 @@
       "original_date": "2026-08-02",
       "amended_date": "2026-12-02",
       "status": "postponed_by_omnibus",
-      "note": "Grace period to 2 December 2026 for systems already on the market at 2 August 2026. Systems placed on the market after that date must comply when placed on the market."
+      "note": "Article 111(4) gives providers of generative systems placed on the market before 2 August 2026 until 2 December 2026 to comply. Systems placed on the market from 2 August 2026 must comply when placed on the market."
     },
     {
       "id": "high_risk_annex_iii",
-      "provision": "Chapter III obligations for stand-alone high-risk AI systems (Annex III)",
+      "provision": "Chapter III, Sections 1, 2 and 3 (except Article 6(5)), for stand-alone high-risk AI systems (Annex III)",
       "original_date": "2026-08-02",
       "amended_date": "2027-12-02",
       "status": "postponed_by_omnibus",
@@ -80,7 +79,7 @@
       "original_date": "2026-08-02",
       "amended_date": "2027-08-02",
       "status": "postponed_by_omnibus",
-      "note": "Each Member State must establish at least one sandbox by 2 August 2027."
+      "note": "Each Member State must have at least one sandbox operational by 2 August 2027."
     }
   ]
 }
