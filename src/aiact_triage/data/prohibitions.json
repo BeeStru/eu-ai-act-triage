@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "source": "Article 5, Regulation (EU) 2024/1689; points (a) to (h) are the binding, in-force text. The Digital Omnibus on AI, which would add points (ba), (bb) and paragraphs 1a and 1b, was signed 8 July 2026 but is not yet published in the Official Journal and is not yet in force.",
-    "note": "Points (a) to (h) apply since 2 February 2025. The NCII/CSAM prohibition is new in the Omnibus and applies from 2 December 2026, subject to entry into force."
+    "source": "Article 5, Regulation (EU) 2024/1689, as amended by Regulation (EU) 2026/1744 (Digital Omnibus on AI), published in the Official Journal on 24 July 2026 and in force since 27 July 2026. Points (ba), (bb) and paragraphs 1a and 1b apply from 2 December 2026.",
+    "note": "Points (a) to (h) apply since 2 February 2025. The NCII/CSAM prohibition added by Regulation (EU) 2026/1744 applies from 2 December 2026 (Article 113(3)(a))."
   },
   "practices": [
     {
@@ -62,9 +62,9 @@
     },
     {
       "id": "ncii_csam_generation",
-      "article": "Art. 5(1), first subpara, points (ba) and (bb), and Art. 5(1a)-(1b) (Digital Omnibus)",
-      "question": "Is generating or manipulating non-consensual intimate imagery of an identifiable person, or CSAM (outside a 'without right' defence under national law), the system's intended purpose, or is it a reasonably foreseeable outcome of the system's design without significant technical modification where the system lacks reasonable and adequate technical safety measures and other safeguards to prevent it, or does a deployer use the system for that purpose (not counting manipulation that does not increase exposure of intimate parts or alter the nature of the depicted activity)?",
-      "summary": "Generation or manipulation of non-consensual intimate imagery or CSAM, where intended, a foreseeable unsafeguarded design outcome, or the deployer's actual purpose (new Omnibus prohibition)",
+      "article": "Art. 5(1), first subpara, points (ba) and (bb), and Art. 5(1a)-(1b) (inserted by Regulation (EU) 2026/1744)",
+      "question": "Is generating or manipulating non-consensual intimate imagery of an identifiable person (covering realistic images, videos, audio or similar material; for this limb only, manipulation that does not increase exposure of intimate parts or alter the nature of the depicted sexually explicit activity does not count), or CSAM (outside a 'without right' defence under national law), the system's intended purpose, or is it a reasonably foreseeable and reproducible outcome of the system's design, training, architecture, capabilities or user-facing functionalities without significant technical modification where the system lacks reasonable and adequate technical safety measures and other safeguards to reliably prevent it, taking into account reasonably foreseeable misuse, and to correct observed or reported misuse, or does a deployer use the system for that purpose?",
+      "summary": "Generation or manipulation of non-consensual intimate imagery or CSAM, where intended, a foreseeable and reproducible unsafeguarded design outcome, or the deployer's actual purpose (new Omnibus prohibition)",
       "timeline_id": "prohibition_ncii_csam"
     }
   ]
