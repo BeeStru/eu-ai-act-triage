@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.5.0 (August 2026)
+
+Alignment with the published Digital Omnibus. Regulation (EU) 2026/1744
+(OJ L, 24.7.2026, in force since 27 July 2026) replaces the Council press
+release and compromise-text citations as the amendment source throughout
+the data files, documents and output strings. Every encoded date was
+re-verified against the Official Journal text and survived unchanged, so
+this release corrects status prose, not dates: the amended dates are the
+binding law, and the original dates remain in every record as historical
+and audit context, with the dual-date rationale in the README and
+methodology recast accordingly. The NCII/CSAM screening question is
+tightened to the final Article 5(1a)-(1b) text: the reproducibility
+qualifier, the five foreseeable-outcome trigger bases, the
+correct-observed-misuse limb, the statutory media list, and the
+manipulation carve-out scoped to the intimate-imagery limb only. Radio
+equipment is dropped from the Annex I examples, since the new Article
+6(1c) makes it a boundary case rather than an illustration, and the
+deadline calendar loses its "(planning baseline)" label.
+
 ## 0.4.0 (July 2026)
 
 Hardening and release readiness. Regression suite pinning the safety
