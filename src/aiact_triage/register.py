@@ -228,8 +228,8 @@ def render_summary(pairs: list[tuple[UseCase, Assessment]]) -> str:
         lines += ["", "## Attention items", ""]
         lines += [f"- {item}" for item in attention]
 
-    # Deadline calendar on the planning baseline (amended date where one
-    # exists), split into what already applies and what is coming.
+    # Deadline calendar on the amended date where one exists, split into
+    # what already applies and what is coming.
     calendar: dict[tuple[str, str], set[str]] = {}
     for case, assessment in pairs:
         for o in assessment.obligations:
@@ -243,7 +243,7 @@ def render_summary(pairs: list[tuple[UseCase, Assessment]]) -> str:
     def _count(names: set[str]) -> str:
         return "1 system" if len(names) == 1 else f"{len(names)} systems"
 
-    lines += ["", "## Deadline calendar (planning baseline)", ""]
+    lines += ["", "## Deadline calendar", ""]
     if applying:
         lines.append("Already applying:")
         for date, article, names in sorted(applying):
@@ -255,9 +255,9 @@ def render_summary(pairs: list[tuple[UseCase, Assessment]]) -> str:
             lines.append(f"- {date}  {article}  ({_count(names)})")
     lines.append("")
     lines.append(
-        "The planning baseline uses the Omnibus amended date where one "
-        "exists. Until Official Journal publication the original dates "
-        "remain the binding law; see each system's record for both dates."
+        "The calendar uses the Omnibus amended date where one exists. The "
+        "amended dates are the binding law (Regulation (EU) 2026/1744, in "
+        "force since 27 July 2026); each system's record shows both dates."
     )
     lines.append("")
     return "\n".join(lines)

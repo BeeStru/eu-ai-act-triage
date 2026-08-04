@@ -1,8 +1,9 @@
 """Loads the rule set from the data directory.
 
 The rules live in JSON, not in code, for two reasons: the legal content can
-be reviewed without reading Python, and when the Digital Omnibus text is
-published in the Official Journal the dates are corrected in one place.
+be reviewed without reading Python, and when the Digital Omnibus was
+published in the Official Journal (Regulation (EU) 2026/1744, OJ L,
+24.7.2026) the alignment was made in the data files, in one place.
 """
 
 from __future__ import annotations

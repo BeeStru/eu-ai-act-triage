@@ -6,8 +6,9 @@ Two modes:
   aiact-triage interactive          Walks the intake questionnaire
 
 The report shows both the original AI Act dates and the Digital Omnibus
-amended dates, with the legal status stated. Until the Omnibus is in the
-Official Journal, the original dates remain the law.
+amended dates, with the legal status stated. The amended dates are the
+binding law (Regulation (EU) 2026/1744, in force since 27 July 2026); the
+original dates are kept for the record.
 """
 
 from __future__ import annotations

@@ -58,7 +58,7 @@ $ aiact-triage register examples/inventory.csv --out audit --assessor "B. Struve
   assessment must be documented and the system registered.
 - Workplace wellbeing emotion monitor (pilot): prohibited practice recorded. Escalate; no compliance pathway exists.
 
-## Deadline calendar (planning baseline)
+## Deadline calendar
 Upcoming:
 - 2027-12-02  Art. 26(2)  (2 systems)
 ```
