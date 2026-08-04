@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "source": "Articles 4, 16, 25, 26, 27 and Chapter III Sections 2 and 3, Regulation (EU) 2024/1689",
+    "source": "Articles 4, 16, 25, 26, 27 and Chapter III Sections 2 and 3, Regulation (EU) 2024/1689, as amended by Regulation (EU) 2026/1744",
     "note": "Deployer obligations are the toolkit's focus. Provider obligations are summarised at chapter level only; a deployer that rebrands, substantially modifies, or repurposes a system into high-risk use becomes a provider under Article 25."
   },
   "high_risk_deployer": [
@@ -59,6 +59,6 @@
   },
   "ai_literacy": {
     "article": "Art. 4",
-    "summary": "Take measures to support the development of AI literacy among staff and other persons dealing with AI systems on the organisation's behalf (wording per the Digital Omnibus, signed 8 July 2026, not yet in force; until then the binding Article 4 text requires measures to ensure, to their best extent, a sufficient level of AI literacy)"
+    "summary": "Take measures to support the development of AI literacy among staff and other persons dealing with AI systems on the organisation's behalf (Article 4 as replaced by Regulation (EU) 2026/1744, in force since 27 July 2026; the original text required measures to ensure, to their best extent, a sufficient level of AI literacy)"
   }
 }
