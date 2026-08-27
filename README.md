@@ -1,4 +1,4 @@
-# EU AI Act deployer-readiness toolkit
+# EU AI Act deployer readiness assessment
 
 A set of instruments for an organisation that deploys AI systems: classify each use case under the EU AI Act, record the result defensibly, and carry the classification through into the model inventory and vendor due diligence. The working core is a triage engine that assesses a whole AI inventory in one pass and writes a dated audit record per system, with obligation dates shown under both the original Act and the Digital Omnibus amendments.
 
