@@ -2,8 +2,9 @@
 
 Each test is a case an interviewer could reasonably probe. The expected
 outcomes are derived from the Act's text as amended by the Digital Omnibus;
-the dates assert against data/timeline.json so a future date correction
-only touches the data layer.
+the dates are pinned here independently of data/timeline.json, so a
+moved date fails this suite until the pins are deliberately updated with
+it.
 """
 
 from aiact_triage.engine import classify
