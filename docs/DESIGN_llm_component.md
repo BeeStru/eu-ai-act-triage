@@ -1,6 +1,6 @@
 # Design: the governed LLM intake assistant (component c)
 
-Status: design complete, build scheduled August 2026. This document is the full specification; nothing here is implemented yet, and the repository says so honestly until it is.
+Status: design complete, not yet built. This document is the full specification; nothing here is implemented yet, and the repository says so honestly until it is.
 
 ## Summary
 
