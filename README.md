@@ -80,6 +80,7 @@ The full framework, the reasoning behind each design choice, and the line betwee
 Python 3.11+, no runtime dependencies.
 
 ```
+python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 aiact-triage interactive                 # walk the intake for one system
 aiact-triage assess case.json            # assess one saved case
