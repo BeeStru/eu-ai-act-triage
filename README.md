@@ -14,7 +14,7 @@ Four components, with their status stated plainly so nothing here is oversold:
 
 - **Triage engine and register mode** (`aiact-triage`, the Python package). Working and tested (38 tests, no runtime dependencies). Classifies one use case or a whole inventory and produces the audit records. This is the core; the rest builds on the classification it produces.
 - **AI inventory template** in the vocabulary of PRA SS1/23, the Bank of England's model risk management principles for banks (`templates/ai_inventory_template.csv`). Complete. A single file that is both a model-risk inventory and the engine's input, so the inventory and the AI register cannot drift apart. Documented in [docs/INVENTORY.md](docs/INVENTORY.md).
-- **Third-party AI due-diligence questionnaire** (`templates/third_party_ai_due_diligence.md`). Complete. Thirty questions for assessing a vendor-supplied AI system, each carrying the framework anchor it evidences (ISO/IEC 42001 Annex A, DORA Articles 28 to 30, the AI Act, PRA SS1/23, or the OWASP LLM Top 10).
+- **Third-party AI due-diligence questionnaire** (`templates/third_party_ai_due_diligence.md`). Complete. Thirty questions for assessing a vendor-supplied AI system. Twenty-nine carry the framework anchor they evidence (ISO/IEC 42001 Annex A, DORA Articles 28 to 30, the AI Act, GDPR, PRA SS1/23 or the OWASP LLM Top 10); the thirtieth, the re-diligence cycle, sets the toolkit's own review cadence and has no framework anchor.
 - **Governed LLM intake assistant** ([docs/DESIGN_llm_component.md](docs/DESIGN_llm_component.md)). Designed, not yet built. An LLM front-end that drafts intake answers for a human to confirm, governed by the toolkit's own instruments. Its evaluation results will be published here when they exist and not before.
 
 The rest of this README covers the engine in depth, then the companion components.
@@ -98,7 +98,7 @@ Classifications also rarely travel alone, so the engine raises knock-on flags in
 
 ## The due-diligence questionnaire
 
-`templates/third_party_ai_due_diligence.md` assesses a vendor-supplied AI system before contract, at renewal, and on any material change. Run the classification first: the depth of diligence scales with the AI Act tier and, in a financial firm, the SS1/23 model tier, so a minimal-risk summariser is not interrogated like a high-risk credit model. Each of the thirty questions names the framework anchor it evidences and the artefact to request, and answers without evidence are recorded as assertions rather than answers. It closes with a proceed, proceed-with-conditions, or decline verdict attached to the system's inventory row and triage record.
+`templates/third_party_ai_due_diligence.md` assesses a vendor-supplied AI system before contract, at renewal, and on any material change. Run the classification first: the depth of diligence scales with the AI Act tier and, in a financial firm, the SS1/23 model tier, so a minimal-risk summariser is not interrogated like a high-risk credit model. Each of the thirty questions names the artefact to request. Each except question 30 also names the framework anchor it evidences. Answers without evidence are recorded as assertions. It closes with a proceed, proceed-with-conditions, or decline verdict attached to the system's inventory row and triage record.
 
 ## Where the rules live
 
