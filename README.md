@@ -83,8 +83,8 @@ Python 3.11+, no runtime dependencies.
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 aiact-triage interactive                 # walk the intake for one system
-aiact-triage assess case.json            # assess one saved case
-aiact-triage register inventory.csv --out audit   # assess a whole inventory
+aiact-triage assess examples/cv_screening.json   # assess one saved case
+aiact-triage register examples/inventory.csv --out audit   # assess a whole inventory
 pytest                                   # worked classification cases
 ```
 
