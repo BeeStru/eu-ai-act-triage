@@ -1,0 +1,14 @@
+Capture commands, run by B. Struve outside the sandbox on 11 October 2026, gh 2.46.0 authenticated as BeeStru.
+
+1. gh api repos/beestru/eu-ai-act-triage/events --paginate --jq '.[] | @json'
+   Returned no records, exit 0 (feed outside its retention window; last push 27 August). Output discarded.
+2. gh api "repos/beestru/eu-ai-act-triage/activity?per_page=100" --paginate --jq '.[] | @json' > WP-CA03-operating-20261011-activity.jsonl
+   Exit 0, 11 records, earliest 2026-07-14T18:06:35Z. Paginated, so no page limit applies.
+3. gh run list --repo beestru/eu-ai-act-triage --limit 100 --json databaseId,workflowName,event,headBranch,headSha,status,conclusion,createdAt > WP-CA03-operating-20261011-runs.json
+   10 runs returned against a limit of 100, so the list is not truncated.
+4. gh run view 33065206756 --repo beestru/eu-ai-act-triage --log
+   Returned an empty file, exit 0, twice. Discarded.
+5. gh api repos/beestru/eu-ai-act-triage/actions/runs/33065206756/logs > WP-CA03-operating-20261011-run-33065206756-logs.zip
+   Exit 0, zip archive, 11,138 bytes on disk, 4 files totalling 45,348 bytes uncompressed. The empty error file records stderr.
+6. gh run view 33065206756 --repo beestru/eu-ai-act-triage --json jobs --jq '.jobs[] | .name as $j | .steps[] | [$j, .number, .name, .conclusion] | @tsv' > WP-CA03-operating-20261011-run-33065206756-steps.tsv
+   Exit 0.

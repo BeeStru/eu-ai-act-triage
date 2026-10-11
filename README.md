@@ -106,6 +106,10 @@ All legal content sits in `src/aiact_triage/data/*.json`, separate from the engi
 
 The engine encodes a curated, hand-maintained subset of the Act (the provisions bearing on classification), not the full text, and it does not update itself. That trade is deliberate and is set out in the methodology document.
 
+## Control testing
+
+I tested this repository's own development controls and published the results in [`control-testing/`](control-testing/). It was also an exercise in running AI agents under human oversight: an AI assistant ran most of the commands and drafted the papers under my direction, while I captured the GitHub evidence, made every ruling and re-ran every command myself. The memo follows ISAE 3000 conventions but is not independent assurance, and it reports four findings as at 11 October 2026 (no branch protection, no review of changes by a second person, README claims that did not match the repository, and a rule that cited no provision); three of the conditions behind them were fixed during testing and the rest remain open.
+
 ## Scope, limits and status
 
 Built for the deployer's position; the provider case is handled at summary level. General-purpose AI model obligations (Articles 51 to 56) are out of scope. Annex I is handled at the level of "product under Annex I harmonisation legislation" rather than per instrument, without the Section A/B split. For a product under Annex I Section B, which since Regulation (EU) 2026/1744 includes machinery, the amended Article 2(2) applies only Article 6(1), Article 60a and Articles 102 to 112 directly; the Omnibus recitals expect the sectoral legislation to carry corresponding requirements in due course, which for machinery rests on a delegated act under Regulation (EU) 2023/1230 due to apply by 2 August 2028. The duty set attached here therefore overstates for that class. The Omnibus dates are verified against Regulation (EU) 2026/1744 as published in the Official Journal. The LLM intake assistant is a design, not running code, until its evaluation results appear here. Not legal advice.

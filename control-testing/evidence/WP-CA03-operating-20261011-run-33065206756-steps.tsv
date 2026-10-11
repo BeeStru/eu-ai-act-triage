@@ -1,0 +1,18 @@
+test (3.12)	1	Set up job	success
+test (3.12)	2	Run actions/checkout@v7	success
+test (3.12)	3	Run actions/setup-python@v6	success
+test (3.12)	4	Run pip install -e ".[dev]"	success
+test (3.12)	5	Run pytest -q	success
+test (3.12)	6	prove non-editable install carries the rule data	success
+test (3.12)	11	Post Run actions/setup-python@v6	success
+test (3.12)	12	Post Run actions/checkout@v7	success
+test (3.12)	13	Complete job	success
+test (3.11)	1	Set up job	success
+test (3.11)	2	Run actions/checkout@v7	success
+test (3.11)	3	Run actions/setup-python@v6	success
+test (3.11)	4	Run pip install -e ".[dev]"	success
+test (3.11)	5	Run pytest -q	success
+test (3.11)	6	prove non-editable install carries the rule data	success
+test (3.11)	11	Post Run actions/setup-python@v6	success
+test (3.11)	12	Post Run actions/checkout@v7	success
+test (3.11)	13	Complete job	success

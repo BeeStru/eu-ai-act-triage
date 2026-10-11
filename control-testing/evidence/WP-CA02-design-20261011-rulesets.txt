@@ -1,0 +1,5 @@
+captured 2026-10-11T11:25:31Z by B. Struve
+--- gh api repos/beestru/eu-ai-act-triage/rulesets
+[]exit 0
+--- gh api repos/beestru/eu-ai-act-triage/rules/branches/main
+[]exit 0

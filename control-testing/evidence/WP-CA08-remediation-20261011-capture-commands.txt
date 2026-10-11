@@ -1,0 +1,4 @@
+Captured by B. Struve outside the sandbox on 11 October 2026, after the remediation push of 22ad85f.
+1. gh run list --repo beestru/eu-ai-act-triage --limit 100 --json databaseId,workflowName,event,headBranch,headSha,status,conclusion,createdAt > WP-CA08-remediation-20261011-runs.json
+2. gh run view 38140312149 --repo beestru/eu-ai-act-triage --json jobs --jq '.jobs[] | .name as $j | .steps[] | [$j, .number, .name, .conclusion] | @tsv' > WP-CA08-remediation-20261011-run-38140312149-steps.tsv
+3. gh api "repos/beestru/eu-ai-act-triage/activity?per_page=100" --paginate --jq '.[] | @json' > WP-CA08-remediation-20261011-activity.jsonl
