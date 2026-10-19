@@ -342,8 +342,8 @@ def classify(case: UseCase) -> Assessment:
 
 
 def _apply_cross_framework(case: UseCase, assessment: Assessment) -> None:
-    """Append knock-on flags for adjacent frameworks (SS1/23, DORA, ISO 42001,
-    GDPR). The flag names the adjacent obligation; it does not assess it.
+    """Append knock-on flags for adjacent frameworks (SS1/23, ISO 42001, GDPR).
+    The flag names the adjacent obligation; it does not assess it.
     Skipped for prohibited systems, whose only next step is escalation."""
     for rule in rules.cross_framework_rules():
         trigger = rule["trigger"]

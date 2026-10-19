@@ -1,6 +1,6 @@
 """Cross-framework flag tests.
 
-The flags name adjacent obligations (SS1/23, DORA, ISO 42001, GDPR); these
+The flags name adjacent obligations (SS1/23, ISO 42001, GDPR); these
 tests pin down when each fires and, as importantly, when it stays silent.
 """
 
@@ -24,11 +24,11 @@ def test_fs_high_risk_gets_ss1_23_inventory_and_lifecycle_flags():
     notes = _cross_notes(classify(case))
     assert any("SS1/23" in n and "model inventory" in n for n in notes)
     assert any("Principles 3 to 5" in n for n in notes)
-    # In-house build: no DORA third-party flag.
-    assert not any("DORA" in n for n in notes)
+    # In-house build: no supplier flag.
+    assert not any("ISO/IEC 42001" in n for n in notes)
 
 
-def test_fs_vendor_system_gets_dora_and_iso42001_flags():
+def test_fs_vendor_system_gets_iso42001_flag_and_no_register_flag():
     case = UseCase(
         name="Vendor chatbot",
         role=Role.DEPLOYER,
@@ -37,11 +37,11 @@ def test_fs_vendor_system_gets_dora_and_iso42001_flags():
         vendor_supplied=True,
     )
     notes = _cross_notes(classify(case))
-    assert any("DORA" in n and "register of information" in n for n in notes)
+    assert not any("register of information" in n for n in notes)
     assert any("ISO/IEC 42001" in n for n in notes)
 
 
-def test_non_fs_vendor_system_gets_iso42001_but_not_dora_or_ss1_23():
+def test_non_fs_vendor_system_gets_iso42001_but_not_ss1_23():
     case = UseCase(
         name="Vendor summariser",
         role=Role.DEPLOYER,
@@ -49,7 +49,6 @@ def test_non_fs_vendor_system_gets_iso42001_but_not_dora_or_ss1_23():
     )
     notes = _cross_notes(classify(case))
     assert any("ISO/IEC 42001" in n for n in notes)
-    assert not any("DORA" in n for n in notes)
     assert not any("SS1/23" in n for n in notes)
 
 
@@ -83,7 +82,7 @@ def test_prohibited_system_gets_no_cross_framework_flags():
 def test_csv_no_in_context_fields_yields_no_cross_framework_flags(tmp_path):
     # End-to-end guard on the boolean parsing of the two context fields: a
     # CSV "no" must stay False all the way through classification, never a
-    # truthy string that fires the SS1/23, DORA and ISO 42001 flags.
+    # truthy string that fires the SS1/23 and ISO 42001 flags.
     from aiact_triage.register import load_register
 
     csv_file = tmp_path / "inventory.csv"
