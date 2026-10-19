@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.6.0 (October 2026)
+
+DORA (Regulation (EU) 2022/2554) is removed. By a scope ruling of 18
+October 2026 it is outside this toolkit's scope and is not mapped, so the
+repository no longer presents it as a framework it maps to or anchors
+against. The DORA third-party cross-framework rule is deleted: a
+vendor-supplied system in a financial-services context no longer receives
+a flag into the DORA register of information (Article 28(3)) or the
+Article 30 contract check. Because this changes the output for any such
+system, the release is a minor version. The cross-framework test for that
+case now pins that the flag is absent. The due-diligence questionnaire
+drops its DORA anchors: questions 24 to 26 are anchored to GDPR Article
+28, which governs a processor's audits, the deletion or return of personal
+data and sub-processor changes directly; question 27, supplier
+concentration, has no direct anchor in the remaining frameworks and is
+left without one, so twenty-eight of the thirty questions carry an anchor.
+Its list of anchor frameworks names GDPR in DORA's place, and the contract
+checklist no longer cites DORA as its spine. The README, methodology and
+inventory field notes no longer describe a DORA flag, and the README's
+scope section states that DORA's ICT third-party requirements may apply to
+financial entities but are not mapped.
+
 ## 0.5.0 (August 2026)
 
 Alignment with the published Digital Omnibus. Regulation (EU) 2026/1744
