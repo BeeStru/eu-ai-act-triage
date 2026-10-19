@@ -40,7 +40,7 @@ These are the UseCase fields documented in the methodology: role, annex_i_produc
 
 Two context columns added in v0.3.0 drive the cross-framework flags:
 
-**financial_services_context.** Yes where the deploying entity is a PRA or FCA regulated financial firm. Triggers the SS1/23 flags and, with vendor_supplied, the DORA third-party flag.
+**financial_services_context.** Yes where the deploying entity is a PRA or FCA regulated financial firm. Triggers the SS1/23 flags.
 
 **vendor_supplied.** Yes where the system is bought rather than built. Triggers the ISO/IEC 42001 supplier-controls flag and feeds the due-diligence questionnaire.
 

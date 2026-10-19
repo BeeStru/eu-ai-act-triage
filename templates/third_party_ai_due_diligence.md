@@ -1,15 +1,15 @@
 # Third-party AI due-diligence questionnaire
 
-A structured questionnaire for assessing a vendor-supplied AI system before contract, at renewal, and on any material change to the system. Each question names the artefact to request. Each except question 30, the re-diligence cycle, also carries the framework anchor it evidences; question 30 sets the toolkit's own review cadence. It pairs with the triage tool: run the classification first, because the depth of diligence should scale with the AI Act tier and, in a financial firm, the SS1/23 model tier. A minimal-risk meeting summariser does not need the same interrogation as a high-risk credit model, and pretending otherwise produces diligence theatre rather than diligence.
+A structured questionnaire for assessing a vendor-supplied AI system before contract, at renewal, and on any material change to the system. Each question names the artefact to request. Each except questions 27 and 30 also carries the framework anchor it evidences: question 27, supplier concentration, has no direct anchor in the frameworks used here, and question 30, the re-diligence cycle, sets the toolkit's own review cadence. It pairs with the triage tool: run the classification first, because the depth of diligence should scale with the AI Act tier and, in a financial firm, the SS1/23 model tier. A minimal-risk meeting summariser does not need the same interrogation as a high-risk credit model, and pretending otherwise produces diligence theatre rather than diligence.
 
-Framework anchors used below: ISO/IEC 42001:2023 Annex A (A.10.2 allocating responsibilities, A.10.3 suppliers, A.7 data for AI systems, A.8 information for interested parties); DORA (Regulation (EU) 2022/2554, Articles 28 to 30) where the deployer is a financial entity; the EU AI Act; PRA SS1/23 Principle 2.6 for firms in scope; OWASP LLM Top 10 (2025) for the security section where the system contains a language-model component.
+Framework anchors used below: ISO/IEC 42001:2023 Annex A (A.10.2 allocating responsibilities, A.10.3 suppliers, A.7 data for AI systems, A.8 information for interested parties); the EU AI Act; UK/EU GDPR where the system processes personal data; PRA SS1/23 Principle 2.6 for firms in scope; OWASP LLM Top 10 (2025) for the security section where the system contains a language-model component.
 
 How to complete: one questionnaire per system, attached to the system's row in the AI inventory and its triage record. Answers without evidence are recorded as assertions, not answers. Close with the verdict block.
 
 ## A. Supplier and system identification
 
-1. Legal entity supplying the system, its ultimate parent, and the full subcontracting chain behind the AI functionality, including any upstream foundation-model provider. Evidence: corporate structure statement; list of material subcontractors. Anchors: ISO A.10.2; DORA Art. 28 (register of information records the chain, not just the counterparty).
-2. System name, version, deployment model (SaaS, on-premise, API), and release cadence, including whether the underlying model can change without a version change. Evidence: product documentation; release policy. Anchors: ISO A.10.3; DORA Art. 30(2) service description.
+1. Legal entity supplying the system, its ultimate parent, and the full subcontracting chain behind the AI functionality, including any upstream foundation-model provider. Evidence: corporate structure statement; list of material subcontractors. Anchors: ISO A.10.2.
+2. System name, version, deployment model (SaaS, on-premise, API), and release cadence, including whether the underlying model can change without a version change. Evidence: product documentation; release policy. Anchors: ISO A.10.3.
 3. The supplier's role under the AI Act for this system (provider, importer, distributor) and confirmation of the deployer's role, including the Article 25 triggers under which the deployer would become a provider (rebranding, substantial modification, repurposing into high-risk use). Evidence: supplier's written role statement. Anchors: AI Act Arts. 3, 25.
 4. Whether the system is, or contains, a general-purpose AI model, and if so which upstream obligations (Articles 53 to 55) the model provider carries and how compliance is evidenced downstream. Evidence: GPAI provider documentation; model provenance statement. Anchors: AI Act Arts. 53 to 55; ISO A.10.2.
 
@@ -33,8 +33,8 @@ How to complete: one questionnaire per system, attached to the system's row in t
 
 15. Pre-release evaluation results relevant to the deployer's use case, distinguishing generic benchmarks from use-case-specific evaluations. Evidence: evaluation report. Anchors: ISO A.10.3; SS1/23 2.6 (vendor models validated to the firm's own standards).
 16. Red-teaming or adversarial testing: scope, date, internal or independent, and material findings with remediation status. Evidence: summary attestation; independent report where available. Anchors: ISO A.10.3; OWASP LLM Top 10 as the reference threat frame.
-17. Regression assurance on updates: how the supplier tests that model or system updates do not degrade the deployer's use case, and whether the deployer is notified before or after changes take effect. Evidence: change management policy. Anchors: DORA Art. 30(3); SS1/23 2.6.
-18. Deployer's own testing rights: API or environment access to run independent evaluations before go-live and periodically after. A refusal here is a finding in itself. Evidence: contractual testing clause. Anchors: ISO A.10.3; DORA Art. 30(3) audit and access rights.
+17. Regression assurance on updates: how the supplier tests that model or system updates do not degrade the deployer's use case, and whether the deployer is notified before or after changes take effect. Evidence: change management policy. Anchors: SS1/23 2.6.
+18. Deployer's own testing rights: API or environment access to run independent evaluations before go-live and periodically after. A refusal here is a finding in itself. Evidence: contractual testing clause. Anchors: ISO A.10.3.
 
 ## E. Security of the AI component (systems with an LLM component)
 
@@ -45,15 +45,15 @@ How to complete: one questionnaire per system, attached to the system's row in t
 
 ## F. Operational resilience and exit
 
-23. Incident definition and notification: what counts as an incident (including model-behaviour incidents, not only availability), notification timescales, and the deployer's obligations it must support, including AI Act serious-incident reporting for high-risk systems. Evidence: incident schedule in the contract. Anchors: DORA Arts. 28, 30(3); AI Act Arts. 26(5), 73.
-24. Audit, inspection and access rights for the deployer and its regulators, including over material subcontractors. Evidence: contract clause. Anchors: DORA Art. 30(3).
-25. Exit strategy: data return and deletion, format and timescale, transition assistance, and what continuity looks like if the supplier fails or the contract terminates abruptly. Evidence: exit plan. Anchors: DORA Arts. 28(8), 30(3).
-26. Sub-outsourcing changes: notification of material changes to the subcontracting chain and the deployer's right to object. Evidence: contract clause. Anchors: DORA Art. 30(2).
-27. Concentration: the supplier's own dependency on a single upstream model or cloud provider, and the deployer's aggregate exposure to that upstream across its vendor estate. Evidence: dependency disclosure; deployer's own register analysis. Anchors: DORA Arts. 28(4), 29.
+23. Incident definition and notification: what counts as an incident (including model-behaviour incidents, not only availability), notification timescales, and the deployer's obligations it must support, including AI Act serious-incident reporting for high-risk systems. Evidence: incident schedule in the contract. Anchors: AI Act Arts. 26(5), 73.
+24. Audit, inspection and access rights for the deployer and its regulators, including over material subcontractors. Evidence: contract clause. Anchors: GDPR Art. 28 (the deployer's own audits and inspections of a processor; regulator access is not covered).
+25. Exit strategy: data return and deletion, format and timescale, transition assistance, and what continuity looks like if the supplier fails or the contract terminates abruptly. Evidence: exit plan. Anchors: GDPR Art. 28 (deletion or return of personal data at the end of the service).
+26. Sub-outsourcing changes: notification of material changes to the subcontracting chain and the deployer's right to object. Evidence: contract clause. Anchors: GDPR Art. 28 (authorisation of sub-processors, and notice of changes with the chance to object under a general authorisation).
+27. Concentration: the supplier's own dependency on a single upstream model or cloud provider, and the deployer's aggregate exposure to that upstream across its vendor estate. Evidence: dependency disclosure; deployer's own register analysis.
 
 ## G. Contract checklist (key provisions)
 
-Before signature, confirm the contract contains: a complete service description including AI functionality and model change policy; data processing locations; availability and performance commitments; incident support and notification obligations; audit and access rights; testing rights; exit and data-return provisions; sub-outsourcing conditions; the no-training clause where required; and the regulatory cooperation clause. Anchors: DORA Art. 30(2) and (3) as the checklist spine, applied proportionately outside financial services.
+Before signature, confirm the contract contains: a complete service description including AI functionality and model change policy; data processing locations; availability and performance commitments; incident support and notification obligations; audit and access rights; testing rights; exit and data-return provisions; sub-outsourcing conditions; the no-training clause where required; and the regulatory cooperation clause.
 
 ## H. Ongoing monitoring
 
@@ -67,4 +67,4 @@ Outcome (one of): proceed; proceed with conditions (list them, with owners and d
 
 ---
 
-Sources and confidence: ISO/IEC 42001:2023 Annex A structure and control numbering (A.2 to A.10, 38 controls; A.10.2, A.10.3) cited at control level against multiple independent practitioner analyses, as the standard's text is paywalled. DORA anchors cited at article level from Regulation (EU) 2022/2554. OWASP references use the LLM Top 10 2025 edition. AI Act dates are verified against Regulation (EU) 2026/1744 as published in the Official Journal; see the packaged `timeline.json` rule file. Verification of these anchors is recorded in the commit history, not asserted here.
+Sources and confidence: ISO/IEC 42001:2023 Annex A structure and control numbering (A.2 to A.10, 38 controls; A.10.2, A.10.3) cited at control level against multiple independent practitioner analyses, as the standard's text is paywalled. OWASP references use the LLM Top 10 2025 edition. AI Act dates are verified against Regulation (EU) 2026/1744 as published in the Official Journal; see the packaged `timeline.json` rule file. Verification of these anchors is recorded in the commit history, not asserted here.
