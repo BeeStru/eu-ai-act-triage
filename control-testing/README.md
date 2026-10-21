@@ -9,3 +9,5 @@ There are ten controls: the checks meant to stop or catch a bad change before it
 The testing produced four findings. Two are missing controls, both still open: no second person reviews a change before it reaches the main branch, and nothing makes a change wait for its tests. The other two are controls that did not work as claimed, and they rest on four conditions. Three were fixed during testing and are still reported: a rule that cited no provision, a README claim that every questionnaire question names a framework, and two install commands that failed. The fourth is still open: one legal statement sits in the code, although the README says all legal content sits in the data files.
 
 Start with [`findings_memo.md`](findings_memo.md).
+
+Changes made after 11 October 2026, including the removal of the DORA mappings in v0.6.0, are outside this test and were not tested.
